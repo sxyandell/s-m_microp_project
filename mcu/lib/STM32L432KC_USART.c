@@ -54,25 +54,25 @@ USART_TypeDef * initUSART(int USART_ID, int baud_rate) {
     }
 
     // Set M = 00
-    // TODO: Configure options
-    USART->CR1 &=     // M=00 corresponds to 1 start bit, 8 data bits, n stop bits
-    USART->CR1 &=  // Set to 16 times sampling freq
-    USART->CR2 &=   // 0b00 corresponds to 1 stop bit
+    USART->CR1 &= ~(USART_CR1_M0 | USART_CR1_M1);    // M=00 corresponds to 1 start bit, 8 data bits, n stop bits
+    USART->CR1 &= ~USART_CR1_OVER8; // Set to 16 times sampling freq
+    USART->CR2 &= ~USART_CR2_STOP;  // 0b00 corresponds to 1 stop bit
 
     // Tx/Rx baud = f_CK/USARTDIV (since oversampling by 16)
     // f_CK = 16 MHz (HSI)
 
-    USART->BRR = 
+    USART->BRR = (uint16_t) (HSI_FREQ / baud_rate);
 
-    USART->CR1 |= ;     // Enable USART
-    USART->CR1 |= ; // Enable transmission and reception
+    USART->CR1 |= USART_CR1_UE;     // Enable USART
+    USART->CR1 |= USART_CR1_TE | USART_CR1_RE; // Enable transmission and reception
 
     return USART;
 }
 
 void sendChar(USART_TypeDef * USART, char data){
-  // TODO: Implement code to send character
-
+    while(!(USART->ISR & USART_ISR_TXE)); // Wait for TXE to go high
+    USART->TDR = data;                    // Write data to register
+    while(!(USART->ISR & USART_ISR_TC));  // Wait for transmission to complete
 }
 
 void sendString(USART_TypeDef * USART, char * charArray){
