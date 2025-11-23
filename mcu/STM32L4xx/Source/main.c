@@ -7,7 +7,11 @@
 
 
 
+<<<<<<< Updated upstream
                                                                                                                                 int main(void) {
+=======
+int main(void) {
+>>>>>>> Stashed changes
 
 	configureFlash();
 	configureClock();
@@ -26,7 +30,11 @@
 		volatile int16_t x = 0, y = 0, z = 0;
 		a3g_read_dsp(&x, &y, &z);
 		printf("Angular velocity: X=%d Y=%d Z=%d dps\n", x, y, z);
+<<<<<<< Updated upstream
                 delay_millis(TIM2, 1000);
+=======
+                delay_millis(TIM2, 200);
+>>>>>>> Stashed changes
 
 	}
 }
