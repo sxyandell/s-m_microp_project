@@ -27,7 +27,7 @@
 #define A3G4250D_WHO_AM_I_VALUE   0xD3
 
 void a3g_init(void);
-void a3g_read_dsp(volatile int16_t *x_dsp, volatile int16_t *y_dsp, volatile int16_t *z_dsp);
+void a3g_read_dsp(volatile float *x_dsp, volatile float *y_dsp, volatile float *z_dsp);
 
 
 #endif // A3G4250D_H
