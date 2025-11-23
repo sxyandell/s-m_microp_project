@@ -47,6 +47,7 @@ void a3g_init(void) {
 	volatile uint8_t who = a3g_read(A3G4250D_REG_WHO_AM_I);
 
 	if (who != A3G4250D_WHO_AM_I_VALUE) {
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:mcu/lib/A3G4250D.c
 		printf("WHO_AM_I mismatch\n");
 		// printf("WHO_AM_I = 0x%X\n", who);
@@ -80,6 +81,7 @@ void a3g_init(void) {
 	a3g_write(A3G4250D_REG_CTRL5, 0x00);
 }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:mcu/lib/A3G4250D.c
 static void a3g_read_raw(int16_t *x_raw, int16_t *y_raw, int16_t *z_raw) {
 	uint8_t OUT_X_L = a3g_read(A3G4250D_REG_OUT_X_L);
@@ -102,6 +104,7 @@ static void a3g_read_raw(volatile int16_t *x_raw, volatile int16_t *y_raw, volat
 	*x_raw = (volatile int16_t)(OUT_X_L | (OUT_X_H << 8));
 	*y_raw = (volatile int16_t)(OUT_Y_L | (OUT_Y_H << 8));
 	*z_raw = (volatile int16_t)(OUT_Z_L | (OUT_Z_H << 8));
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes:mcu/STM32L4xx/Source/lib/A3G4250D.c
 	//printf("raw: x: %d, y: %d, z: %d\n", *x_raw, *y_raw, *z_raw);
 }

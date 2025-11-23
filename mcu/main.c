@@ -25,6 +25,8 @@ int main(void) {
 		a3g_read_dsp(&x, &y, &z);
 		printf("Angular velocity: X=%d Y=%d Z=%d dps\n", x, y, z);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
 =======
                 delay_millis(TIM15, 500);
 
