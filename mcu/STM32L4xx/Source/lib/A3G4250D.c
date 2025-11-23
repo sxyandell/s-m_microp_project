@@ -53,15 +53,7 @@ void a3g_init(void) {
 
 	// CTRL1 bits: [DDR1,DR0,BW1,BW0,PD,Zen,Yen,Xen] (7.2 in datasheet)
 	// DR=01 (200 Hz), BW=10 (50 Hz cutoff), PD=1, Zen=Yen=Xen=1 => 01101111 => 0x6F
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-	a3g_write(A3G4250D_REG_CTRL1, 0x2F);
-=======
 	a3g_write(A3G4250D_REG_CTRL1, 0x6F);
->>>>>>> Stashed changes
-=======
-	a3g_write(A3G4250D_REG_CTRL1, 0x6F);
->>>>>>> Stashed changes
 
 	// CTRL2 bits: [0, 0, HPM1, HPM1, HPC3, HPC2, HPC1, HPC0] (7.3 in datasheet)
 	// HPM1=0, HPM0=0, HPC3=0, HPC2=0, HPC1=0, HPC0=0 => 00000000 => 0x00
