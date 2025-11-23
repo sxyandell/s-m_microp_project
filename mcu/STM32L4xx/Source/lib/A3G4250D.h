@@ -28,7 +28,11 @@
 
 void a3g_init(void);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 void a3g_read_dsp(volatile float *x_dsp, volatile float *y_dsp, volatile float *z_dsp);
+=======
+void a3g_read_dsp(volatile int16_t *x_dsp, volatile int16_t *y_dsp, volatile int16_t *z_dsp);
+>>>>>>> Stashed changes
 =======
 void a3g_read_dsp(volatile int16_t *x_dsp, volatile int16_t *y_dsp, volatile int16_t *z_dsp);
 >>>>>>> Stashed changes

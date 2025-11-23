@@ -8,7 +8,11 @@
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                                                                                                                                 int main(void) {
+=======
+int main(void) {
+>>>>>>> Stashed changes
 =======
 int main(void) {
 >>>>>>> Stashed changes
@@ -31,7 +35,11 @@ int main(void) {
 		a3g_read_dsp(&x, &y, &z);
 		printf("Angular velocity: X=%d Y=%d Z=%d dps\n", x, y, z);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 delay_millis(TIM2, 1000);
+=======
+                delay_millis(TIM2, 200);
+>>>>>>> Stashed changes
 =======
                 delay_millis(TIM2, 200);
 >>>>>>> Stashed changes

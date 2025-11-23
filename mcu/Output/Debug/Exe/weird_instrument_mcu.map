@@ -22,7 +22,11 @@ Memory use by input file:
   ---------------------------------------------  ----------  ----------  ----------  ----------
   A3G4250D.o                                            542          29                        
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   main.o                                                120          38                        
+=======
+  main.o                                                118          38                        
+>>>>>>> Stashed changes
 =======
   main.o                                                118          38                        
 >>>>>>> Stashed changes
@@ -37,7 +41,11 @@ Memory use by input file:
   system_stm32l4xx.o                                    462          64           4            
   ---------------------------------------------  ----------  ----------  ----------  ----------
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   Subtotal (11 objects)                               2 722         131           4            
+=======
+  Subtotal (11 objects)                               2 720         131           4            
+>>>>>>> Stashed changes
 =======
   Subtotal (11 objects)                               2 720         131           4            
 >>>>>>> Stashed changes
@@ -58,7 +66,11 @@ Memory use by input file:
   Linker created (shared data, fills, blocks):                       84                   2 048
   =============================================  ==========  ==========  ==========  ==========
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   Total:                                              9 756       1 033          36       3 280
+=======
+  Total:                                              9 754       1 033          36       3 280
+>>>>>>> Stashed changes
 =======
   Total:                                              9 754       1 033          36       3 280
 >>>>>>> Stashed changes
@@ -99,15 +111,21 @@ Memory use by archive member:
   ---------------------------------------------  ----------  ----------  ----------  ----------
   Subtotal (14 members from 5 archives)               7 034         818          32       1 232
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   Objects (11 files)                                  2 722         131           4            
   Linker created (shared data, fills, blocks):                       84                   2 048
   =============================================  ==========  ==========  ==========  ==========
   Total:                                              9 756       1 033          36       3 280
 =======
+=======
+>>>>>>> Stashed changes
   Objects (11 files)                                  2 720         131           4            
   Linker created (shared data, fills, blocks):                       84                   2 048
   =============================================  ==========  ==========  ==========  ==========
   Total:                                              9 754       1 033          36       3 280
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   =============================================  ==========  ==========  ==========  ==========
 
@@ -121,15 +139,21 @@ Memory use by linker:
   Subtotal (linker created):                                         84                   2 048
   ---------------------------------------------  ----------  ----------  ----------  ----------
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   Objects (11 files)                                  2 722         131           4            
   Archives (5 files)                                  7 034         818          32       1 232
   =============================================  ==========  ==========  ==========  ==========
   Total:                                              9 756       1 033          36       3 280
 =======
+=======
+>>>>>>> Stashed changes
   Objects (11 files)                                  2 720         131           4            
   Archives (5 files)                                  7 034         818          32       1 232
   =============================================  ==========  ==========  ==========  ==========
   Total:                                              9 754       1 033          36       3 280
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   =============================================  ==========  ==========  ==========  ==========
 
@@ -153,6 +177,7 @@ Sections by address:
   080002a8-08000347  __SEGGER_RTL_ipow10               160   8  Cnst  RO  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   08000348-080003a3  SystemInit                         92   4  Code  RX  system_stm32l4xx.o
   080003a4-080003d3  MSIRangeTable                      48   4  Cnst  RO  system_stm32l4xx.o
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   080003d4-0800044b  main                              120   4  Code  RX  main.o
   0800044c-080004b3  a3g_init                          104   4  Code  RX  A3G4250D.o
@@ -355,6 +380,8 @@ Sections by address:
                                                         13   1  Cnst  RO  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   080028cf-080028cf  ( UNUSED .=.+1 )                    1   -  ----  -   -
 =======
+=======
+>>>>>>> Stashed changes
   080003d4-0800043b  a3g_init                          104   4  Code  RX  A3G4250D.o
   0800043c-08000447  gpioPinToPort                      12   4  Code  RX  STM32L432KC_GPIO.o
   08000448-08000487  gpioPortToBase                     64   4  Code  RX  STM32L432KC_GPIO.o
@@ -555,6 +582,9 @@ Sections by address:
   080028c0-080028cc  __SEGGER_RTL_ascii_ctype_mask
                                                         13   1  Cnst  RO  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   080028cd-080028cf  ( UNUSED .=.+3 )                    3   -  ----  -   -
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   080028d0-080028d3  [.init_array]                       4   4  ----  --  STM32L4xx_Startup.o
   080028d4-080028e3  AHBPrescTable                      16   1  Cnst  RO  system_stm32l4xx.o
@@ -601,6 +631,7 @@ Function symbols by name:
 
   Symbol name                   Address        Size  Align  Type  Bd  Object File
   -------------------------  ----------  ----------  -----  ----  --  -----------
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   ADC1_IRQHandler            0x08002071                  2  Code  Wk  stm32l432xx_Vectors.o
   BusFault_Handler           0x08001207                  2  Code  Wk  stm32l432xx_Vectors.o
@@ -721,6 +752,8 @@ Function symbols by name:
   __SEGGER_RTL_putc          0x08002423         132      2  Code  Gb  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_stream_write  0x080021DF          10      2  Code  Lc  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
 =======
+=======
+>>>>>>> Stashed changes
   ADC1_IRQHandler            0x0800206F                  2  Code  Wk  stm32l432xx_Vectors.o
   BusFault_Handler           0x0800118F                  2  Code  Wk  stm32l432xx_Vectors.o
   CAN1_RX0_IRQHandler        0x08002073                  2  Code  Wk  stm32l432xx_Vectors.o
@@ -839,12 +872,16 @@ Function symbols by name:
                              0x080024C1          76      2  Code  Gb  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_putc          0x08002421         132      2  Code  Gb  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_stream_write  0x080021DD          10      2  Code  Lc  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   __SEGGER_RTL_vfprintf      0x080013AD       3 234      4  Code  Gb  __SEGGER_RTL_vfprintf_short_float_long_wchar.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_vfprintf_short_float_long_wchar
                              0x080013AD       3 234      4  Code  Gb  __SEGGER_RTL_vfprintf_short_float_long_wchar.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_init_copy         0x08002A17          20      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_init_ctors        0x0800298D          26      4  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   __SEGGER_init_done         0x0800079B                  4  Code  Gb  SEGGER_THUMB_Startup.o
   __SEGGER_init_zero         0x08002A05          18      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
@@ -872,6 +909,8 @@ Function symbols by name:
   _start                     0x08000791          14      4  Code  Gb  SEGGER_THUMB_Startup.o
   a3g_init                   0x0800044D         104      4  Code  Gb  A3G4250D.o
 =======
+=======
+>>>>>>> Stashed changes
   __SEGGER_init_done         0x08000723                  4  Code  Gb  SEGGER_THUMB_Startup.o
   __SEGGER_init_zero         0x08002A05          18      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __aeabi_d2f                0x08000D21          76      4  Code  Wk  floatasmops_arm.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
@@ -897,11 +936,15 @@ Function symbols by name:
   __startup_complete         0x08000723                  4  Code  Gb  SEGGER_THUMB_Startup.o
   _start                     0x08000719          14      4  Code  Gb  SEGGER_THUMB_Startup.o
   a3g_init                   0x080003D5         104      4  Code  Gb  A3G4250D.o
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   a3g_read                   0x08001209          70      4  Code  Lc  A3G4250D.o
   a3g_read_dsp               0x08000191         184      8  Code  Gb  A3G4250D.o
   a3g_read_raw               0x08001291         122      4  Code  Lc  A3G4250D.o
   a3g_write                  0x08001251          62      4  Code  Lc  A3G4250D.o
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   abs                        0x0800241B           8      2  Code  Wk  intops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   configureClock             0x080005FD          48      4  Code  Gb  STM32L432KC_RCC.o
@@ -934,6 +977,8 @@ Function symbols by name:
   vfprintf_l                 0x0800252B         108      2  Code  Wk  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   wctomb_l                   0x08000FE1          48      4  Code  Wk  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
 =======
+=======
+>>>>>>> Stashed changes
   abs                        0x08002419           8      2  Code  Wk  intops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   configureClock             0x08000585          48      4  Code  Gb  STM32L432KC_RCC.o
   configureFlash             0x0800130D          26      4  Code  Gb  STM32L432KC_FLASH.o
@@ -964,6 +1009,9 @@ Function symbols by name:
   vfprintf                   0x0800250D          28      2  Code  Wk  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   vfprintf_l                 0x08002529         108      2  Code  Wk  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   wctomb_l                   0x08000F69          48      4  Code  Wk  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 Function symbols by address:
@@ -975,6 +1023,7 @@ Function symbols by address:
   0x08000191  a3g_read_dsp                      184      8  Code  Gb  A3G4250D.o
   0x08000249  initTIM                            96      8  Code  Gb  STM32L432KC_TIM.o
   0x08000349  SystemInit                         92      4  Code  Gb  system_stm32l4xx.o
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   0x080003D5  main                              120      4  Code  Gb  main.o
   0x0800044D  a3g_init                          104      4  Code  Gb  A3G4250D.o
@@ -1150,6 +1199,8 @@ Function symbols by address:
                                                  32      2  Code  Lc  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   0x08002733  __SEGGER_RTL_ascii_towupper
 =======
+=======
+>>>>>>> Stashed changes
   0x080003D5  a3g_init                          104      4  Code  Gb  A3G4250D.o
   0x0800043D  gpioPinToPort                      12      4  Code  Gb  STM32L432KC_GPIO.o
   0x08000449  gpioPortToBase                     64      4  Code  Gb  STM32L432KC_GPIO.o
@@ -1323,6 +1374,9 @@ Function symbols by address:
   0x08002711  __SEGGER_RTL_ascii_iswctype
                                                  32      2  Code  Lc  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   0x08002731  __SEGGER_RTL_ascii_towupper
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                                                  12      2  Code  Lc  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   0x0800298D  __SEGGER_init_ctors                26      4  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
@@ -1347,7 +1401,11 @@ Function symbols by descending size:
   __SEGGER_RTL_putc                 132      2  Code  Gb  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   a3g_read_raw                      122      4  Code  Lc  A3G4250D.o
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   main                              120      4  Code  Gb  main.o
+=======
+  main                              118      4  Code  Gb  main.o
+>>>>>>> Stashed changes
 =======
   main                              118      4  Code  Gb  main.o
 >>>>>>> Stashed changes
@@ -1584,6 +1642,7 @@ Read-only data symbols by name:
   AHBPrescTable              0x080028D4          16         Cnst  Gb  system_stm32l4xx.o
   MSIRangeTable              0x080003A4          48      4  Cnst  Gb  system_stm32l4xx.o
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   _DoInit._aInitStr          0x08002847          17         Cnst  Lc  SEGGER_RTT.o (prinops_rtt_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_aPower2f      0x08000948          24      4  Cnst  Lc  utilops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_ascii_ctype_map
@@ -1616,6 +1675,8 @@ Read-only data symbols by name:
   __SEGGER_RTL_data_utf8_period
                              0x08002831           2         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
 =======
+=======
+>>>>>>> Stashed changes
   _DoInit._aInitStr          0x08002845          17         Cnst  Lc  SEGGER_RTT.o (prinops_rtt_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_aPower2f      0x080008D0          24      4  Cnst  Lc  utilops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_ascii_ctype_map
@@ -1647,6 +1708,9 @@ Read-only data symbols by name:
                              0x080028BF           1         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_data_utf8_period
                              0x0800282F           2         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   __SEGGER_RTL_hex_lc        0x080028F4          16         Cnst  Gb  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   __SEGGER_RTL_hex_uc        0x080028E4          16         Cnst  Gb  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
@@ -1660,6 +1724,7 @@ Read-only data symbols by address:
   ----------  -------------------------  ----------  -----  ----  --  -----------
   0x080002A8  __SEGGER_RTL_ipow10               160      8  Cnst  Gb  prinops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   0x080003A4  MSIRangeTable                      48      4  Cnst  Gb  system_stm32l4xx.o
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   0x08000948  __SEGGER_RTL_aPower2f              24      4  Cnst  Lc  utilops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   0x08001010  __SEGGER_RTL_c_locale              12      4  Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
@@ -1690,6 +1755,8 @@ Read-only data symbols by address:
                                                   1         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   0x080028C2  __SEGGER_RTL_ascii_ctype_mask
 =======
+=======
+>>>>>>> Stashed changes
   0x080008D0  __SEGGER_RTL_aPower2f              24      4  Cnst  Lc  utilops.o (libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   0x08000F98  __SEGGER_RTL_c_locale              12      4  Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   0x08000FA4  __SEGGER_RTL_codeset_ascii
@@ -1718,6 +1785,9 @@ Read-only data symbols by address:
   0x080028BF  __SEGGER_RTL_data_empty_string
                                                   1         Cnst  Gb  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   0x080028C0  __SEGGER_RTL_ascii_ctype_mask
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                                                  13         Cnst  Lc  mbops.o (mbops_timeops_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
   0x080028D4  AHBPrescTable                      16         Cnst  Gb  system_stm32l4xx.o
@@ -1864,8 +1934,13 @@ Untyped symbols by address:
 Memory breakdown:
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     9 756 bytes read-only  code    + 
     1 033 bytes read-only  data    =  10 789 bytes read-only (total)
+=======
+    9 754 bytes read-only  code    + 
+    1 033 bytes read-only  data    =  10 787 bytes read-only (total)
+>>>>>>> Stashed changes
 =======
     9 754 bytes read-only  code    + 
     1 033 bytes read-only  data    =  10 787 bytes read-only (total)
@@ -1877,7 +1952,11 @@ Region summary:
   Name        Range                     Size                 Used               Unused       Alignment Loss
   ----------  -----------------  -----------  -------------------  -------------------  -------------------
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   FLASH       08000000-0803ffff      262 144       10 793   4.12%      251 351  95.88%            0   0.00%
+=======
+  FLASH       08000000-0803ffff      262 144       10 791   4.12%      251 353  95.88%            0   0.00%
+>>>>>>> Stashed changes
 =======
   FLASH       08000000-0803ffff      262 144       10 791   4.12%      251 353  95.88%            0   0.00%
 >>>>>>> Stashed changes

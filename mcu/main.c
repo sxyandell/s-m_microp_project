@@ -13,7 +13,11 @@ int main(void) {
 	configureClock();
         
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     initTIM(TIM15);
+=======
+        initTIM(TIM15);
+>>>>>>> Stashed changes
 =======
         initTIM(TIM15);
 >>>>>>> Stashed changes
@@ -29,7 +33,11 @@ int main(void) {
 		a3g_read_dsp(&x, &y, &z);
 		printf("Angular velocity: X=%d Y=%d Z=%d dps\n", x, y, z);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         delay_millis(TIM15, 200);
+=======
+                delay_millis(TIM15, 500);
+>>>>>>> Stashed changes
 =======
                 delay_millis(TIM15, 500);
 >>>>>>> Stashed changes
