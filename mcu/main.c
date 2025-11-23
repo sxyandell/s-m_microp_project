@@ -20,7 +20,7 @@ int main(void) {
 	a3g_init();
 
 	while (1) {
-		int16_t x = 0, y = 0, z = 0;
+		float x = 0, y = 0, z = 0;
 		a3g_read_dsp(&x, &y, &z);
 		printf("Angular velocity: X=%d Y=%d Z=%d dps\n", x, y, z);
 	}

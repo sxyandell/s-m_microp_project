@@ -87,14 +87,14 @@ static void a3g_read_raw(int16_t *x_raw, int16_t *y_raw, int16_t *z_raw) {
 	//printf("raw: x: %d, y: %d, z: %d\n", *x_raw, *y_raw, *z_raw);
 }
 
-void a3g_read_dsp(int16_t *x_dsp, int16_t *y_dsp, int16_t *z_dsp) {
+void a3g_read_dsp(float  *x_dsp, float  *y_dsp, float *z_dsp) {
 	int16_t x_raw = 0, y_raw = 0, z_raw = 0;
 	a3g_read_raw(&x_raw, &y_raw, &z_raw);
 
 	// Sensitivity 8.75 mdps/digit = 0.00875 dps/LSB
 	// dps = raw * 0.00875
-	*x_dsp = (int16_t)(x_raw * 0.00875);
-	*y_dsp = (int16_t)(y_raw * 0.00875);
-	*z_dsp = (int16_t)(z_raw * 0.00875);
+	*x_dsp = (float)(x_raw * 0.00875);
+	*y_dsp = (float)(y_raw * 0.00875);
+	*z_dsp = (float)(z_raw * 0.00875);
 	printf("dsp: x: %d, y: %d, z: %d\n", *x_dsp, *y_dsp, *z_dsp);
 }
