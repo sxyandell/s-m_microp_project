@@ -28,6 +28,7 @@ int main(void) {
 <<<<<<< Updated upstream
 =======
 =======
+>>>>>>> Stashed changes
                 delay_millis(TIM15, 500);
 
 >>>>>>> Stashed changes

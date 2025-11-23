@@ -47,22 +47,14 @@ void a3g_init(void) {
 	volatile uint8_t who = a3g_read(A3G4250D_REG_WHO_AM_I);
 
 	if (who != A3G4250D_WHO_AM_I_VALUE) {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream:mcu/lib/A3G4250D.c
-		printf("WHO_AM_I mismatch\n");
-		// printf("WHO_AM_I = 0x%X\n", who);
-		// printf("Expected WHO_AM_I = 0x%X\n", A3G4250D_WHO_AM_I_VALUE);
-=======
 		printf("who: %x \n", who);
                 printf("WHO_AM_I mismatch\n");
->>>>>>> Stashed changes:mcu/STM32L4xx/Source/lib/A3G4250D.c
 	}
 
 	// CTRL1 bits: [DDR1,DR0,BW1,BW0,PD,Zen,Yen,Xen] (7.2 in datasheet)
 	// DR=01 (200 Hz), BW=10 (50 Hz cutoff), PD=1, Zen=Yen=Xen=1 => 01101111 => 0x6F
-	a3g_write(A3G4250D_REG_CTRL1, 0x6F);
+	a3g_write(A3G4250D_REG_CTRL1, 0x2F);
 
-	// default lower code is a sanity check
 	// CTRL2 bits: [0, 0, HPM1, HPM1, HPC3, HPC2, HPC1, HPC0] (7.3 in datasheet)
 	// HPM1=0, HPM0=0, HPC3=0, HPC2=0, HPC1=0, HPC0=0 => 00000000 => 0x00
 	// leave default (HPF off)
@@ -81,19 +73,6 @@ void a3g_init(void) {
 	a3g_write(A3G4250D_REG_CTRL5, 0x00);
 }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream:mcu/lib/A3G4250D.c
-static void a3g_read_raw(int16_t *x_raw, int16_t *y_raw, int16_t *z_raw) {
-	uint8_t OUT_X_L = a3g_read(A3G4250D_REG_OUT_X_L);
-	uint8_t OUT_X_H = a3g_read(A3G4250D_REG_OUT_X_H);
-	uint8_t OUT_Y_L = a3g_read(A3G4250D_REG_OUT_Y_L);
-	uint8_t OUT_Y_H = a3g_read(A3G4250D_REG_OUT_Y_H);
-	uint8_t OUT_Z_L = a3g_read(A3G4250D_REG_OUT_Z_L);
-	uint8_t OUT_Z_H = a3g_read(A3G4250D_REG_OUT_Z_H);
-	*x_raw = (int16_t)(OUT_X_L | (OUT_X_H << 8));
-	*y_raw = (int16_t)(OUT_Y_L | (OUT_Y_H << 8));
-	*z_raw = (int16_t)(OUT_Z_L | (OUT_Z_H << 8));
-=======
 static void a3g_read_raw(volatile int16_t *x_raw, volatile int16_t *y_raw, volatile int16_t *z_raw) {
 	volatile uint8_t OUT_X_L = a3g_read(A3G4250D_REG_OUT_X_L);
 	volatile uint8_t OUT_X_H = a3g_read(A3G4250D_REG_OUT_X_H);
@@ -104,8 +83,6 @@ static void a3g_read_raw(volatile int16_t *x_raw, volatile int16_t *y_raw, volat
 	*x_raw = (volatile int16_t)(OUT_X_L | (OUT_X_H << 8));
 	*y_raw = (volatile int16_t)(OUT_Y_L | (OUT_Y_H << 8));
 	*z_raw = (volatile int16_t)(OUT_Z_L | (OUT_Z_H << 8));
-<<<<<<< Updated upstream
->>>>>>> Stashed changes:mcu/STM32L4xx/Source/lib/A3G4250D.c
 	//printf("raw: x: %d, y: %d, z: %d\n", *x_raw, *y_raw, *z_raw);
 }
 
