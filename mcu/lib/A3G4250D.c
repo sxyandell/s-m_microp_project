@@ -47,6 +47,8 @@ void a3g_init(void) {
 
 	if (who != A3G4250D_WHO_AM_I_VALUE) {
 		printf("WHO_AM_I mismatch\n");
+		// printf("WHO_AM_I = 0x%X\n", who);
+		// printf("Expected WHO_AM_I = 0x%X\n", A3G4250D_WHO_AM_I_VALUE);
 	}
 
 	// CTRL1 bits: [DDR1,DR0,BW1,BW0,PD,Zen,Yen,Xen] (7.2 in datasheet)
@@ -71,7 +73,7 @@ void a3g_init(void) {
 	a3g_write(A3G4250D_REG_CTRL5, 0x00);
 }
 
-void a3g_read_raw(int16_t *x_raw, int16_t *y_raw, int16_t *z_raw) {
+static void a3g_read_raw(int16_t *x_raw, int16_t *y_raw, int16_t *z_raw) {
 	uint8_t OUT_X_L = a3g_read(A3G4250D_REG_OUT_X_L);
 	uint8_t OUT_X_H = a3g_read(A3G4250D_REG_OUT_X_H);
 	uint8_t OUT_Y_L = a3g_read(A3G4250D_REG_OUT_Y_L);
