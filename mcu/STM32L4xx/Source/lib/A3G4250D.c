@@ -86,6 +86,7 @@ static void a3g_read_raw(volatile int16_t *x_raw, volatile int16_t *y_raw, volat
 	//printf("raw: x: %d, y: %d, z: %d\n", *x_raw, *y_raw, *z_raw);
 }
 
+// try making xyz floats?
 void a3g_read_dsp(volatile int16_t *x_dsp, volatile int16_t *y_dsp, volatile int16_t *z_dsp) {
 	volatile int16_t x_raw = 0, y_raw = 0, z_raw = 0;
 	a3g_read_raw(&x_raw, &y_raw, &z_raw);
