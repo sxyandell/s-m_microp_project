@@ -8,10 +8,10 @@
 #include <stm32l432xx.h>
 
 
-#define SPI_CE PA12                                                                                                                                                                                                                                                                                            
-#define SPI_SCK PB3
-#define SPI_MOSI PB5 //SDI
-#define SPI_MISO PB4 //SDO
+#define SPI_CE PA12           // 4                                                                                                                                                                                                                                                                                 
+#define SPI_SCK PB3       // 2
+#define SPI_MOSI PB5 //SDI    // 3
+#define SPI_MISO PB4 //SDO   // 1
 
 ///////////////////////////////////////////////////////////////////////////////
 // Function prototypes
