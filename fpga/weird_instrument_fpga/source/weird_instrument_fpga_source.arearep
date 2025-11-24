@@ -1,0 +1,11 @@
+----------------------------------------------------------------------
+Report for cell shiftreg.TECH
+Register bits:  0 of 5280 (0.000%)
+I/O cells:      105
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                 IB        54          100.0
+                              IOL_B        51          100.0
+                               LUT4        51          100.0
+                                 OB        51          100.0
+                              TOTAL       207

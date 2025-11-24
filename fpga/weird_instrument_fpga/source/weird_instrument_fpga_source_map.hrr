@@ -1,0 +1,10 @@
+---------------------------------------------------
+Report for cell shiftreg
+   Instance path: shiftreg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOLGC	      51.00        100.0
+                                  LUT4	         51        100.0
+                               LUTGATE	         51        100.0
+                                 IOREG	         51        100.0
+                                 IOBUF	        105        100.0
