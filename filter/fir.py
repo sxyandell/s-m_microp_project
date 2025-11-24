@@ -45,7 +45,13 @@ def plot_filter_response(h, fs, fpass, fstop):
 
     plt.show()
 
+def signed_to_hex(value: int, bits: int = 32) -> str:
+    mask = (1 << bits) - 1
+    unsigned_value = value & mask
+    return format(unsigned_value, '0{}x'.format(bits//4)).upper()
+
 # === MAIN EXPERIMENT ===
+
 cutOffFreqs = [200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600]
 # cutOffFreqs = [400]
 cutOffFrequency = 400
@@ -104,6 +110,9 @@ for i in range(len(cutOffFreqs)):
 
     for i in range(numtaps):
         tapsarr[i].append(h[i].round(decimals=5).item())
+        # tap_formatted = signed_to_hex(int(h[i]*(2**15)), bits=16)
+        # print(tap_formatted)\
+        print(h[i])
         
 plt.show()
 
@@ -132,7 +141,7 @@ for i in range(numtaps):
     # print(f"taps b{i} accross freqs: {tapsarr[i]}")
     # print(f"b{i}: tap = {a}*cutOffFreq**3 + {b}*cutOffFreq**2 + {c}*cutOffFreq + {d}")
     # print(f"b{i}: tap = {a}*cutOffFreq + {b}")
-    print(f"taps[{i}] = {a}*cutOffFreq**2 + {b}*cutOffFreq + {c}")
+    # print(f"taps[{i}] = {a}*cutOffFreq**2 + {b}*cutOffFreq + {c}")
 
     # taplabels.append(f"b{i}")
     taplabels.append(f"tap = {a}*cutOffFreq + {b}")
