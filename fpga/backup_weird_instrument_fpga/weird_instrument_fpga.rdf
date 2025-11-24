@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RadiantProject version="4.2" radiant="2025.1.0.39.0" title="weird_instrument_fpga" device="iCE40UP5K-SG48I" performance_grade="High-Performance_1.2V" family_int="ice40tp" device_int="itpa08" package_int="SG48" operation_int="IND" speed_int="6" default_implementation="source">
+    <Options/>
+    <Implementation title="source" dir="source" description="source" synthesis="lse" default_strategy="Strategy1">
+        <Options/>
+        <Source name="source/source/shiftreg.sv" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="System Verilog"/>
+        </Source>
+        <Source name="source/source/tb_shiftreg.sv" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="System Verilog" top_module="tb_shiftreg"/>
+        </Source>
+        <Source name="source/source/gettap_sync.sv" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="System Verilog"/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="weird_instrument_fpga1.sty"/>
+</RadiantProject>
