@@ -99,6 +99,7 @@ def apply_filter(orig, taps):
     taps = np.array(taps)
     shiftreg = np.array([float(0)]*len(taps))
     filtered = np.array([float(0)]*len(orig))
+    print(taps)
     # [b0, b1, b2, b3, b4, b5, b6] = taps
     for i in range(len(orig)):
         # print(i)

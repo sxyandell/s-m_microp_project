@@ -112,7 +112,7 @@ for i in range(len(cutOffFreqs)):
         tapsarr[i].append(h[i].round(decimals=5).item())
         # tap_formatted = signed_to_hex(int(h[i]*(2**15)), bits=16)
         # print(tap_formatted)\
-        print(h[i])
+        print(f"{cutOffFrequency}Hz tap b{i}: {h[i]}")
         
 plt.show()
 
