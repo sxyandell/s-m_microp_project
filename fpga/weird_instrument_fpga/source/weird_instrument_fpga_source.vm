@@ -1,0 +1,846 @@
+// Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2024.2.0.3.0
+// Netlist written on Sun Nov 23 20:20:10 2025
+// Source file index table: 
+// Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
+// file 0 "c:/users/mkan/documents/github/s-m_microp_project/fpga/weird_instrument_fpga/source/source/shiftreg.sv"
+// file 1 "c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.v"
+// file 2 "c:/lscc/radiant/2024.2/ip/pmi/pmi_ice40up.vhd"
+// file 3 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/ccu2_b.v"
+// file 4 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/fd1p3bz.v"
+// file 5 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/fd1p3dz.v"
+// file 6 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/fd1p3iz.v"
+// file 7 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/fd1p3jz.v"
+// file 8 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/hsosc.v"
+// file 9 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/hsosc1p8v.v"
+// file 10 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/ib.v"
+// file 11 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/ifd1p3az.v"
+// file 12 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/lsosc.v"
+// file 13 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/lsosc1p8v.v"
+// file 14 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/ob.v"
+// file 15 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/obz_b.v"
+// file 16 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/ofd1p3az.v"
+// file 17 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/pdp4k.v"
+// file 18 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/rgb.v"
+// file 19 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/rgb1p8v.v"
+// file 20 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/sp256k.v"
+// file 21 "c:/lscc/radiant/2024.2/cae_library/simulation/verilog/ice40up/legacy.v"
+// file 22 "c:/lscc/radiant/2024.2/ip/common/adder/rtl/lscc_adder.v"
+// file 23 "c:/lscc/radiant/2024.2/ip/common/adder_subtractor/rtl/lscc_add_sub.v"
+// file 24 "c:/lscc/radiant/2024.2/ip/common/complex_mult/rtl/lscc_complex_mult.v"
+// file 25 "c:/lscc/radiant/2024.2/ip/common/counter/rtl/lscc_cntr.v"
+// file 26 "c:/lscc/radiant/2024.2/ip/common/fifo/rtl/lscc_fifo.v"
+// file 27 "c:/lscc/radiant/2024.2/ip/common/fifo_dc/rtl/lscc_fifo_dc.v"
+// file 28 "c:/lscc/radiant/2024.2/ip/common/mult_accumulate/rtl/lscc_mult_accumulate.v"
+// file 29 "c:/lscc/radiant/2024.2/ip/common/mult_add_sub/rtl/lscc_mult_add_sub.v"
+// file 30 "c:/lscc/radiant/2024.2/ip/common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v"
+// file 31 "c:/lscc/radiant/2024.2/ip/common/multiplier/rtl/lscc_multiplier.v"
+// file 32 "c:/lscc/radiant/2024.2/ip/common/ram_dp/rtl/lscc_ram_dp.v"
+// file 33 "c:/lscc/radiant/2024.2/ip/common/ram_dq/rtl/lscc_ram_dq.v"
+// file 34 "c:/lscc/radiant/2024.2/ip/common/rom/rtl/lscc_rom.v"
+// file 35 "c:/lscc/radiant/2024.2/ip/common/subtractor/rtl/lscc_subtractor.v"
+// file 36 "c:/lscc/radiant/2024.2/ip/pmi/pmi_add.v"
+// file 37 "c:/lscc/radiant/2024.2/ip/pmi/pmi_addsub.v"
+// file 38 "c:/lscc/radiant/2024.2/ip/pmi/pmi_complex_mult.v"
+// file 39 "c:/lscc/radiant/2024.2/ip/pmi/pmi_counter.v"
+// file 40 "c:/lscc/radiant/2024.2/ip/pmi/pmi_dsp.v"
+// file 41 "c:/lscc/radiant/2024.2/ip/pmi/pmi_fifo.v"
+// file 42 "c:/lscc/radiant/2024.2/ip/pmi/pmi_fifo_dc.v"
+// file 43 "c:/lscc/radiant/2024.2/ip/pmi/pmi_mac.v"
+// file 44 "c:/lscc/radiant/2024.2/ip/pmi/pmi_mult.v"
+// file 45 "c:/lscc/radiant/2024.2/ip/pmi/pmi_multaddsub.v"
+// file 46 "c:/lscc/radiant/2024.2/ip/pmi/pmi_multaddsubsum.v"
+// file 47 "c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dp.v"
+// file 48 "c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dp_be.v"
+// file 49 "c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dq.v"
+// file 50 "c:/lscc/radiant/2024.2/ip/pmi/pmi_ram_dq_be.v"
+// file 51 "c:/lscc/radiant/2024.2/ip/pmi/pmi_rom.v"
+// file 52 "c:/lscc/radiant/2024.2/ip/pmi/pmi_sub.v"
+
+//
+// Verilog Description of module shiftreg
+//
+
+module shiftreg (input clk, input ready_in, input x_n, input [50:0]shiftreg_prev, 
+            output [50:0]shiftreg_new);
+    
+    (* is_clock=1, SET_AS_NETWORK="clk_c", lineinfo="@0(15[29],15[32])" *) wire clk_c;
+    wire ready_in_c;
+    wire x_n_c;
+    wire shiftreg_prev_c_50;
+    wire shiftreg_prev_c_49;
+    wire shiftreg_prev_c_48;
+    wire shiftreg_prev_c_47;
+    wire shiftreg_prev_c_46;
+    wire shiftreg_prev_c_45;
+    wire shiftreg_prev_c_44;
+    wire shiftreg_prev_c_43;
+    wire shiftreg_prev_c_42;
+    wire shiftreg_prev_c_41;
+    wire shiftreg_prev_c_40;
+    wire shiftreg_prev_c_39;
+    wire shiftreg_prev_c_38;
+    wire shiftreg_prev_c_37;
+    wire shiftreg_prev_c_36;
+    wire shiftreg_prev_c_35;
+    wire shiftreg_prev_c_34;
+    wire shiftreg_prev_c_33;
+    wire shiftreg_prev_c_32;
+    wire shiftreg_prev_c_31;
+    wire shiftreg_prev_c_30;
+    wire shiftreg_prev_c_29;
+    wire shiftreg_prev_c_28;
+    wire shiftreg_prev_c_27;
+    wire shiftreg_prev_c_26;
+    wire shiftreg_prev_c_25;
+    wire shiftreg_prev_c_24;
+    wire shiftreg_prev_c_23;
+    wire shiftreg_prev_c_22;
+    wire shiftreg_prev_c_21;
+    wire shiftreg_prev_c_20;
+    wire shiftreg_prev_c_19;
+    wire shiftreg_prev_c_18;
+    wire shiftreg_prev_c_17;
+    wire shiftreg_prev_c_16;
+    wire shiftreg_prev_c_15;
+    wire shiftreg_prev_c_14;
+    wire shiftreg_prev_c_13;
+    wire shiftreg_prev_c_12;
+    wire shiftreg_prev_c_11;
+    wire shiftreg_prev_c_10;
+    wire shiftreg_prev_c_9;
+    wire shiftreg_prev_c_8;
+    wire shiftreg_prev_c_7;
+    wire shiftreg_prev_c_6;
+    wire shiftreg_prev_c_5;
+    wire shiftreg_prev_c_4;
+    wire shiftreg_prev_c_3;
+    wire shiftreg_prev_c_2;
+    wire shiftreg_prev_c_1;
+    wire shiftreg_prev_c_0;
+    wire shiftreg_new_c_50;
+    wire shiftreg_new_c_49;
+    wire shiftreg_new_c_48;
+    wire shiftreg_new_c_47;
+    wire shiftreg_new_c_46;
+    wire shiftreg_new_c_45;
+    wire shiftreg_new_c_44;
+    wire shiftreg_new_c_43;
+    wire shiftreg_new_c_42;
+    wire shiftreg_new_c_41;
+    wire shiftreg_new_c_40;
+    wire shiftreg_new_c_39;
+    wire shiftreg_new_c_38;
+    wire shiftreg_new_c_37;
+    wire shiftreg_new_c_36;
+    wire shiftreg_new_c_35;
+    wire shiftreg_new_c_34;
+    wire shiftreg_new_c_33;
+    wire shiftreg_new_c_32;
+    wire shiftreg_new_c_31;
+    wire shiftreg_new_c_30;
+    wire shiftreg_new_c_29;
+    wire shiftreg_new_c_28;
+    wire shiftreg_new_c_27;
+    wire shiftreg_new_c_26;
+    wire shiftreg_new_c_25;
+    wire shiftreg_new_c_24;
+    wire shiftreg_new_c_23;
+    wire shiftreg_new_c_22;
+    wire shiftreg_new_c_21;
+    wire shiftreg_new_c_20;
+    wire shiftreg_new_c_19;
+    wire shiftreg_new_c_18;
+    wire shiftreg_new_c_17;
+    wire shiftreg_new_c_16;
+    wire shiftreg_new_c_15;
+    wire shiftreg_new_c_14;
+    wire shiftreg_new_c_13;
+    wire shiftreg_new_c_12;
+    wire shiftreg_new_c_11;
+    wire shiftreg_new_c_10;
+    wire shiftreg_new_c_9;
+    wire shiftreg_new_c_8;
+    wire shiftreg_new_c_7;
+    wire shiftreg_new_c_6;
+    wire shiftreg_new_c_5;
+    wire shiftreg_new_c_4;
+    wire shiftreg_new_c_3;
+    wire shiftreg_new_c_2;
+    wire shiftreg_new_c_1;
+    wire shiftreg_new_c_0;
+    
+    wire GND_net;
+    wire [50:0]shiftreg_new_c_50_N_1;
+    
+    wire VCC_net;
+    
+    VHI i17 (.Z(VCC_net));
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i2 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[1]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_1));
+    defparam shiftreg_new_i2.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i2.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i1 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[0]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_0));
+    defparam shiftreg_new_i1.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i1.DDROUT = "NO";
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[50]  (.I(shiftreg_new_c_50), 
+            .O(shiftreg_new[50]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[49]  (.I(shiftreg_new_c_49), 
+            .O(shiftreg_new[49]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[48]  (.I(shiftreg_new_c_48), 
+            .O(shiftreg_new[48]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[47]  (.I(shiftreg_new_c_47), 
+            .O(shiftreg_new[47]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[46]  (.I(shiftreg_new_c_46), 
+            .O(shiftreg_new[46]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[45]  (.I(shiftreg_new_c_45), 
+            .O(shiftreg_new[45]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[44]  (.I(shiftreg_new_c_44), 
+            .O(shiftreg_new[44]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[43]  (.I(shiftreg_new_c_43), 
+            .O(shiftreg_new[43]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[42]  (.I(shiftreg_new_c_42), 
+            .O(shiftreg_new[42]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[41]  (.I(shiftreg_new_c_41), 
+            .O(shiftreg_new[41]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[40]  (.I(shiftreg_new_c_40), 
+            .O(shiftreg_new[40]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[39]  (.I(shiftreg_new_c_39), 
+            .O(shiftreg_new[39]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[38]  (.I(shiftreg_new_c_38), 
+            .O(shiftreg_new[38]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[37]  (.I(shiftreg_new_c_37), 
+            .O(shiftreg_new[37]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[36]  (.I(shiftreg_new_c_36), 
+            .O(shiftreg_new[36]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[35]  (.I(shiftreg_new_c_35), 
+            .O(shiftreg_new[35]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[34]  (.I(shiftreg_new_c_34), 
+            .O(shiftreg_new[34]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[33]  (.I(shiftreg_new_c_33), 
+            .O(shiftreg_new[33]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[32]  (.I(shiftreg_new_c_32), 
+            .O(shiftreg_new[32]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[31]  (.I(shiftreg_new_c_31), 
+            .O(shiftreg_new[31]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[30]  (.I(shiftreg_new_c_30), 
+            .O(shiftreg_new[30]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[29]  (.I(shiftreg_new_c_29), 
+            .O(shiftreg_new[29]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[28]  (.I(shiftreg_new_c_28), 
+            .O(shiftreg_new[28]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[27]  (.I(shiftreg_new_c_27), 
+            .O(shiftreg_new[27]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[26]  (.I(shiftreg_new_c_26), 
+            .O(shiftreg_new[26]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[25]  (.I(shiftreg_new_c_25), 
+            .O(shiftreg_new[25]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[24]  (.I(shiftreg_new_c_24), 
+            .O(shiftreg_new[24]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[23]  (.I(shiftreg_new_c_23), 
+            .O(shiftreg_new[23]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[22]  (.I(shiftreg_new_c_22), 
+            .O(shiftreg_new[22]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[21]  (.I(shiftreg_new_c_21), 
+            .O(shiftreg_new[21]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[20]  (.I(shiftreg_new_c_20), 
+            .O(shiftreg_new[20]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[19]  (.I(shiftreg_new_c_19), 
+            .O(shiftreg_new[19]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[18]  (.I(shiftreg_new_c_18), 
+            .O(shiftreg_new[18]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[17]  (.I(shiftreg_new_c_17), 
+            .O(shiftreg_new[17]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[16]  (.I(shiftreg_new_c_16), 
+            .O(shiftreg_new[16]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[15]  (.I(shiftreg_new_c_15), 
+            .O(shiftreg_new[15]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[14]  (.I(shiftreg_new_c_14), 
+            .O(shiftreg_new[14]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[13]  (.I(shiftreg_new_c_13), 
+            .O(shiftreg_new[13]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[12]  (.I(shiftreg_new_c_12), 
+            .O(shiftreg_new[12]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[11]  (.I(shiftreg_new_c_11), 
+            .O(shiftreg_new[11]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[10]  (.I(shiftreg_new_c_10), 
+            .O(shiftreg_new[10]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[9]  (.I(shiftreg_new_c_9), 
+            .O(shiftreg_new[9]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[8]  (.I(shiftreg_new_c_8), 
+            .O(shiftreg_new[8]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[7]  (.I(shiftreg_new_c_7), 
+            .O(shiftreg_new[7]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[6]  (.I(shiftreg_new_c_6), 
+            .O(shiftreg_new[6]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[5]  (.I(shiftreg_new_c_5), 
+            .O(shiftreg_new[5]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[4]  (.I(shiftreg_new_c_4), 
+            .O(shiftreg_new[4]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[3]  (.I(shiftreg_new_c_3), 
+            .O(shiftreg_new[3]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[2]  (.I(shiftreg_new_c_2), 
+            .O(shiftreg_new[2]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[1]  (.I(shiftreg_new_c_1), 
+            .O(shiftreg_new[1]));
+    (* lineinfo="@0(18[25],18[37])" *) OB \shiftreg_new_pad[0]  (.I(shiftreg_new_c_0), 
+            .O(shiftreg_new[0]));
+    (* lineinfo="@0(15[29],15[32])" *) IB clk_pad (.I(clk), .O(clk_c));
+    (* lineinfo="@0(15[34],15[42])" *) IB ready_in_pad (.I(ready_in), .O(ready_in_c));
+    (* lineinfo="@0(16[17],16[20])" *) IB x_n_pad (.I(x_n), .O(x_n_c));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[50]  (.I(shiftreg_prev[50]), 
+            .O(shiftreg_prev_c_50));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[49]  (.I(shiftreg_prev[49]), 
+            .O(shiftreg_prev_c_49));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[48]  (.I(shiftreg_prev[48]), 
+            .O(shiftreg_prev_c_48));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[47]  (.I(shiftreg_prev[47]), 
+            .O(shiftreg_prev_c_47));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[46]  (.I(shiftreg_prev[46]), 
+            .O(shiftreg_prev_c_46));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[45]  (.I(shiftreg_prev[45]), 
+            .O(shiftreg_prev_c_45));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[44]  (.I(shiftreg_prev[44]), 
+            .O(shiftreg_prev_c_44));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[43]  (.I(shiftreg_prev[43]), 
+            .O(shiftreg_prev_c_43));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[42]  (.I(shiftreg_prev[42]), 
+            .O(shiftreg_prev_c_42));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[41]  (.I(shiftreg_prev[41]), 
+            .O(shiftreg_prev_c_41));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[40]  (.I(shiftreg_prev[40]), 
+            .O(shiftreg_prev_c_40));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[39]  (.I(shiftreg_prev[39]), 
+            .O(shiftreg_prev_c_39));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[38]  (.I(shiftreg_prev[38]), 
+            .O(shiftreg_prev_c_38));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[37]  (.I(shiftreg_prev[37]), 
+            .O(shiftreg_prev_c_37));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[36]  (.I(shiftreg_prev[36]), 
+            .O(shiftreg_prev_c_36));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[35]  (.I(shiftreg_prev[35]), 
+            .O(shiftreg_prev_c_35));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[34]  (.I(shiftreg_prev[34]), 
+            .O(shiftreg_prev_c_34));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[33]  (.I(shiftreg_prev[33]), 
+            .O(shiftreg_prev_c_33));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[32]  (.I(shiftreg_prev[32]), 
+            .O(shiftreg_prev_c_32));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[31]  (.I(shiftreg_prev[31]), 
+            .O(shiftreg_prev_c_31));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[30]  (.I(shiftreg_prev[30]), 
+            .O(shiftreg_prev_c_30));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[29]  (.I(shiftreg_prev[29]), 
+            .O(shiftreg_prev_c_29));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[28]  (.I(shiftreg_prev[28]), 
+            .O(shiftreg_prev_c_28));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[27]  (.I(shiftreg_prev[27]), 
+            .O(shiftreg_prev_c_27));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[26]  (.I(shiftreg_prev[26]), 
+            .O(shiftreg_prev_c_26));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[25]  (.I(shiftreg_prev[25]), 
+            .O(shiftreg_prev_c_25));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[24]  (.I(shiftreg_prev[24]), 
+            .O(shiftreg_prev_c_24));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[23]  (.I(shiftreg_prev[23]), 
+            .O(shiftreg_prev_c_23));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[22]  (.I(shiftreg_prev[22]), 
+            .O(shiftreg_prev_c_22));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[21]  (.I(shiftreg_prev[21]), 
+            .O(shiftreg_prev_c_21));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[20]  (.I(shiftreg_prev[20]), 
+            .O(shiftreg_prev_c_20));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[19]  (.I(shiftreg_prev[19]), 
+            .O(shiftreg_prev_c_19));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[18]  (.I(shiftreg_prev[18]), 
+            .O(shiftreg_prev_c_18));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[17]  (.I(shiftreg_prev[17]), 
+            .O(shiftreg_prev_c_17));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[16]  (.I(shiftreg_prev[16]), 
+            .O(shiftreg_prev_c_16));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[15]  (.I(shiftreg_prev[15]), 
+            .O(shiftreg_prev_c_15));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[14]  (.I(shiftreg_prev[14]), 
+            .O(shiftreg_prev_c_14));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[13]  (.I(shiftreg_prev[13]), 
+            .O(shiftreg_prev_c_13));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[12]  (.I(shiftreg_prev[12]), 
+            .O(shiftreg_prev_c_12));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[11]  (.I(shiftreg_prev[11]), 
+            .O(shiftreg_prev_c_11));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[10]  (.I(shiftreg_prev[10]), 
+            .O(shiftreg_prev_c_10));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[9]  (.I(shiftreg_prev[9]), 
+            .O(shiftreg_prev_c_9));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[8]  (.I(shiftreg_prev[8]), 
+            .O(shiftreg_prev_c_8));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[7]  (.I(shiftreg_prev[7]), 
+            .O(shiftreg_prev_c_7));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[6]  (.I(shiftreg_prev[6]), 
+            .O(shiftreg_prev_c_6));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[5]  (.I(shiftreg_prev[5]), 
+            .O(shiftreg_prev_c_5));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[4]  (.I(shiftreg_prev[4]), 
+            .O(shiftreg_prev_c_4));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[3]  (.I(shiftreg_prev[3]), 
+            .O(shiftreg_prev_c_3));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[2]  (.I(shiftreg_prev[2]), 
+            .O(shiftreg_prev_c_2));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[1]  (.I(shiftreg_prev[1]), 
+            .O(shiftreg_prev_c_1));
+    (* lineinfo="@0(17[24],17[37])" *) IB \shiftreg_prev_pad[0]  (.I(shiftreg_prev[0]), 
+            .O(shiftreg_prev_c_0));
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i3 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[2]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_2));
+    defparam shiftreg_new_i3.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i3.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i4 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[3]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_3));
+    defparam shiftreg_new_i4.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i4.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i5 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[4]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_4));
+    defparam shiftreg_new_i5.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i5.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i6 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[5]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_5));
+    defparam shiftreg_new_i6.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i6.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i7 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[6]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_6));
+    defparam shiftreg_new_i7.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i7.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i8 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[7]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_7));
+    defparam shiftreg_new_i8.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i8.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i9 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[8]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_8));
+    defparam shiftreg_new_i9.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i9.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i10 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[9]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_9));
+    defparam shiftreg_new_i10.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i10.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i11 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[10]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_10));
+    defparam shiftreg_new_i11.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i11.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i12 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[11]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_11));
+    defparam shiftreg_new_i12.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i12.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i13 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[12]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_12));
+    defparam shiftreg_new_i13.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i13.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i14 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[13]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_13));
+    defparam shiftreg_new_i14.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i14.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i15 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[14]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_14));
+    defparam shiftreg_new_i15.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i15.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i16 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[15]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_15));
+    defparam shiftreg_new_i16.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i16.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i17 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[16]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_16));
+    defparam shiftreg_new_i17.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i17.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i18 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[17]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_17));
+    defparam shiftreg_new_i18.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i18.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i19 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[18]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_18));
+    defparam shiftreg_new_i19.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i19.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i20 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[19]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_19));
+    defparam shiftreg_new_i20.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i20.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i21 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[20]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_20));
+    defparam shiftreg_new_i21.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i21.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i22 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[21]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_21));
+    defparam shiftreg_new_i22.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i22.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i23 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[22]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_22));
+    defparam shiftreg_new_i23.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i23.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i24 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[23]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_23));
+    defparam shiftreg_new_i24.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i24.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i25 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[24]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_24));
+    defparam shiftreg_new_i25.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i25.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i26 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[25]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_25));
+    defparam shiftreg_new_i26.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i26.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i27 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[26]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_26));
+    defparam shiftreg_new_i27.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i27.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i28 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[27]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_27));
+    defparam shiftreg_new_i28.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i28.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i29 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[28]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_28));
+    defparam shiftreg_new_i29.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i29.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i30 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[29]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_29));
+    defparam shiftreg_new_i30.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i30.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i31 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[30]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_30));
+    defparam shiftreg_new_i31.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i31.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i32 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[31]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_31));
+    defparam shiftreg_new_i32.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i32.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i33 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[32]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_32));
+    defparam shiftreg_new_i33.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i33.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i34 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[33]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_33));
+    defparam shiftreg_new_i34.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i34.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i35 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[34]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_34));
+    defparam shiftreg_new_i35.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i35.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i36 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[35]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_35));
+    defparam shiftreg_new_i36.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i36.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i37 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[36]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_36));
+    defparam shiftreg_new_i37.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i37.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i38 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[37]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_37));
+    defparam shiftreg_new_i38.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i38.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i39 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[38]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_38));
+    defparam shiftreg_new_i39.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i39.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i40 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[39]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_39));
+    defparam shiftreg_new_i40.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i40.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i41 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[40]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_40));
+    defparam shiftreg_new_i41.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i41.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i42 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[41]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_41));
+    defparam shiftreg_new_i42.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i42.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i43 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[42]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_42));
+    defparam shiftreg_new_i43.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i43.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i44 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[43]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_43));
+    defparam shiftreg_new_i44.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i44.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i45 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[44]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_44));
+    defparam shiftreg_new_i45.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i45.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i46 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[45]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_45));
+    defparam shiftreg_new_i46.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i46.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i47 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[46]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_46));
+    defparam shiftreg_new_i47.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i47.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i48 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[47]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_47));
+    defparam shiftreg_new_i48.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i48.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i49 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[48]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_48));
+    defparam shiftreg_new_i49.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i49.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i50 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[49]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_49));
+    defparam shiftreg_new_i50.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i50.DDROUT = "NO";
+    (* lineinfo="@0(22[12],24[37])" *) IOL_B shiftreg_new_i51 (.PADDI(GND_net), 
+            .DO1(GND_net), .DO0(shiftreg_new_c_50_N_1[50]), .CE(VCC_net), 
+            .IOLTO(GND_net), .HOLD(GND_net), .INCLK(GND_net), .OUTCLK(clk_c), 
+            .PADDO(shiftreg_new_c_50));
+    defparam shiftreg_new_i51.LATCHIN = "LATCH_REG";
+    defparam shiftreg_new_i51.DDROUT = "NO";
+    VLO i22 (.Z(GND_net));
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i1_3_lut (.A(shiftreg_prev_c_0), 
+            .B(x_n_c), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[0]));
+    defparam mux_4_i1_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i2_3_lut (.A(shiftreg_prev_c_1), 
+            .B(shiftreg_prev_c_0), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[1]));
+    defparam mux_4_i2_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i3_3_lut (.A(shiftreg_prev_c_2), 
+            .B(shiftreg_prev_c_1), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[2]));
+    defparam mux_4_i3_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i4_3_lut (.A(shiftreg_prev_c_3), 
+            .B(shiftreg_prev_c_2), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[3]));
+    defparam mux_4_i4_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i5_3_lut (.A(shiftreg_prev_c_4), 
+            .B(shiftreg_prev_c_3), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[4]));
+    defparam mux_4_i5_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i6_3_lut (.A(shiftreg_prev_c_5), 
+            .B(shiftreg_prev_c_4), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[5]));
+    defparam mux_4_i6_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i7_3_lut (.A(shiftreg_prev_c_6), 
+            .B(shiftreg_prev_c_5), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[6]));
+    defparam mux_4_i7_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i8_3_lut (.A(shiftreg_prev_c_7), 
+            .B(shiftreg_prev_c_6), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[7]));
+    defparam mux_4_i8_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i9_3_lut (.A(shiftreg_prev_c_8), 
+            .B(shiftreg_prev_c_7), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[8]));
+    defparam mux_4_i9_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i10_3_lut (.A(shiftreg_prev_c_9), 
+            .B(shiftreg_prev_c_8), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[9]));
+    defparam mux_4_i10_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i11_3_lut (.A(shiftreg_prev_c_10), 
+            .B(shiftreg_prev_c_9), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[10]));
+    defparam mux_4_i11_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i12_3_lut (.A(shiftreg_prev_c_11), 
+            .B(shiftreg_prev_c_10), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[11]));
+    defparam mux_4_i12_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i13_3_lut (.A(shiftreg_prev_c_12), 
+            .B(shiftreg_prev_c_11), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[12]));
+    defparam mux_4_i13_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i14_3_lut (.A(shiftreg_prev_c_13), 
+            .B(shiftreg_prev_c_12), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[13]));
+    defparam mux_4_i14_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i15_3_lut (.A(shiftreg_prev_c_14), 
+            .B(shiftreg_prev_c_13), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[14]));
+    defparam mux_4_i15_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i16_3_lut (.A(shiftreg_prev_c_15), 
+            .B(shiftreg_prev_c_14), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[15]));
+    defparam mux_4_i16_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i17_3_lut (.A(shiftreg_prev_c_16), 
+            .B(shiftreg_prev_c_15), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[16]));
+    defparam mux_4_i17_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i18_3_lut (.A(shiftreg_prev_c_17), 
+            .B(shiftreg_prev_c_16), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[17]));
+    defparam mux_4_i18_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i19_3_lut (.A(shiftreg_prev_c_18), 
+            .B(shiftreg_prev_c_17), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[18]));
+    defparam mux_4_i19_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i20_3_lut (.A(shiftreg_prev_c_19), 
+            .B(shiftreg_prev_c_18), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[19]));
+    defparam mux_4_i20_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i21_3_lut (.A(shiftreg_prev_c_20), 
+            .B(shiftreg_prev_c_19), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[20]));
+    defparam mux_4_i21_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i22_3_lut (.A(shiftreg_prev_c_21), 
+            .B(shiftreg_prev_c_20), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[21]));
+    defparam mux_4_i22_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i23_3_lut (.A(shiftreg_prev_c_22), 
+            .B(shiftreg_prev_c_21), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[22]));
+    defparam mux_4_i23_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i24_3_lut (.A(shiftreg_prev_c_23), 
+            .B(shiftreg_prev_c_22), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[23]));
+    defparam mux_4_i24_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i25_3_lut (.A(shiftreg_prev_c_24), 
+            .B(shiftreg_prev_c_23), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[24]));
+    defparam mux_4_i25_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i26_3_lut (.A(shiftreg_prev_c_25), 
+            .B(shiftreg_prev_c_24), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[25]));
+    defparam mux_4_i26_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i27_3_lut (.A(shiftreg_prev_c_26), 
+            .B(shiftreg_prev_c_25), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[26]));
+    defparam mux_4_i27_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i28_3_lut (.A(shiftreg_prev_c_27), 
+            .B(shiftreg_prev_c_26), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[27]));
+    defparam mux_4_i28_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i29_3_lut (.A(shiftreg_prev_c_28), 
+            .B(shiftreg_prev_c_27), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[28]));
+    defparam mux_4_i29_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i30_3_lut (.A(shiftreg_prev_c_29), 
+            .B(shiftreg_prev_c_28), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[29]));
+    defparam mux_4_i30_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i31_3_lut (.A(shiftreg_prev_c_30), 
+            .B(shiftreg_prev_c_29), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[30]));
+    defparam mux_4_i31_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i32_3_lut (.A(shiftreg_prev_c_31), 
+            .B(shiftreg_prev_c_30), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[31]));
+    defparam mux_4_i32_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i33_3_lut (.A(shiftreg_prev_c_32), 
+            .B(shiftreg_prev_c_31), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[32]));
+    defparam mux_4_i33_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i34_3_lut (.A(shiftreg_prev_c_33), 
+            .B(shiftreg_prev_c_32), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[33]));
+    defparam mux_4_i34_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i35_3_lut (.A(shiftreg_prev_c_34), 
+            .B(shiftreg_prev_c_33), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[34]));
+    defparam mux_4_i35_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i36_3_lut (.A(shiftreg_prev_c_35), 
+            .B(shiftreg_prev_c_34), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[35]));
+    defparam mux_4_i36_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i37_3_lut (.A(shiftreg_prev_c_36), 
+            .B(shiftreg_prev_c_35), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[36]));
+    defparam mux_4_i37_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i38_3_lut (.A(shiftreg_prev_c_37), 
+            .B(shiftreg_prev_c_36), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[37]));
+    defparam mux_4_i38_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i39_3_lut (.A(shiftreg_prev_c_38), 
+            .B(shiftreg_prev_c_37), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[38]));
+    defparam mux_4_i39_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i40_3_lut (.A(shiftreg_prev_c_39), 
+            .B(shiftreg_prev_c_38), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[39]));
+    defparam mux_4_i40_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i41_3_lut (.A(shiftreg_prev_c_40), 
+            .B(shiftreg_prev_c_39), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[40]));
+    defparam mux_4_i41_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i42_3_lut (.A(shiftreg_prev_c_41), 
+            .B(shiftreg_prev_c_40), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[41]));
+    defparam mux_4_i42_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i43_3_lut (.A(shiftreg_prev_c_42), 
+            .B(shiftreg_prev_c_41), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[42]));
+    defparam mux_4_i43_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i44_3_lut (.A(shiftreg_prev_c_43), 
+            .B(shiftreg_prev_c_42), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[43]));
+    defparam mux_4_i44_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i45_3_lut (.A(shiftreg_prev_c_44), 
+            .B(shiftreg_prev_c_43), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[44]));
+    defparam mux_4_i45_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i46_3_lut (.A(shiftreg_prev_c_45), 
+            .B(shiftreg_prev_c_44), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[45]));
+    defparam mux_4_i46_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i47_3_lut (.A(shiftreg_prev_c_46), 
+            .B(shiftreg_prev_c_45), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[46]));
+    defparam mux_4_i47_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i48_3_lut (.A(shiftreg_prev_c_47), 
+            .B(shiftreg_prev_c_46), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[47]));
+    defparam mux_4_i48_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i49_3_lut (.A(shiftreg_prev_c_48), 
+            .B(shiftreg_prev_c_47), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[48]));
+    defparam mux_4_i49_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i50_3_lut (.A(shiftreg_prev_c_49), 
+            .B(shiftreg_prev_c_48), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[49]));
+    defparam mux_4_i50_3_lut.INIT = "0xcaca";
+    (* lut_function="(A (B+!(C))+!A (B (C)))", lineinfo="@0(23[3],24[37])" *) LUT4 mux_4_i51_3_lut (.A(shiftreg_prev_c_50), 
+            .B(shiftreg_prev_c_49), .C(ready_in_c), .Z(shiftreg_new_c_50_N_1[50]));
+    defparam mux_4_i51_3_lut.INIT = "0xcaca";
+    
+endmodule
