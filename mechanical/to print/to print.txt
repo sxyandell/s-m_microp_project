@@ -1,0 +1,6 @@
+turntable base and lid
+streamcheap base and face plate 
+slew + bearing stl
+hose clamp 5mm to test?
+
+.ino is sample code for reading keyboard
