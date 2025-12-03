@@ -17,6 +17,7 @@ void initADC(void) {
   //RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;
   //RCC->APB2ENR |= _VAL2FLD(RCC_APB2ENR_SYSCFGEN, 0b1);
   //__enable_irq();
+  //  maybe try rewriting these with different syntax?? they work tho
   RCC -> AHB2ENR |= _VAL2FLD(RCC_AHB2ENR_ADCEN, 0b1); // enable adc clk
   RCC -> CCIPR |= _VAL2FLD(RCC_CCIPR_ADCSEL, ADC_CLKSRC_SYSCLK); // System clock selected as ADCs clock
 
@@ -30,14 +31,24 @@ void initADC(void) {
 
   ADC1 -> CR |= _VAL2FLD(ADC_CR_DEEPPWD, 0b0); // exit deep power down mode
   ADC1 -> CR |= _VAL2FLD(ADC_CR_ADVREGEN, 0b1); // enable adc voltage regulator
-  // wait for startup time to configure ADC
+  ADC1 -> CFGR |= _VAL2FLD(ADC_CFGR_RES, ADC_6BIT_RES); // define resolution of conversion to be 6 bits
+  // wait for voltage reg startup time to configure ADC
   // requires 20 us. 800 / 40 MHz default clk = 20 us
   // volatile int x = 5;
   volatile int x = 800;
   while (x-- > 0)
     __asm("nop");
   //ADC1 -> CR |= _VAL2FLD(ADC_CR_ADEN, 0b0); // disable ADC
-  ADC1 -> CFGR |= _VAL2FLD(ADC_CFGR_RES, ADC_6BIT_RES); // define resolution of conversion to be 6 bits
+ 
+  ///////////////////
+  // CALIBRATE ADC //
+  ///////////////////
+  //2. Ensure that ADEN = 0.
+  // 3. Select the input mode for this calibration by setting ADCALDIF = 0 (single-ended input) 
+  //or ADCALDIF = 1 (differential input).
+  // 4. Set ADCAL.
+  // 5. Wait until ADCAL = 0.
+  // 6. The calibration factor can be read from ADC_CALFACT register.
 
   //////////////// 
   // ENABLE ADC //
