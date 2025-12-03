@@ -17,10 +17,13 @@ void initADC(void) {
   RCC -> AHB2ENR |= _VAL2FLD(RCC_AHB2ENR_ADCEN, 0b1); // enable adc clk
   RCC -> CCIPR |= _VAL2FLD(RCC_CCIPR_ADCSEL, ADC_CLKSRC_SYSCLK); // System clock selected as ADCs clock
 
+  // bottom two are not happening?!
   ADC1 -> CR |= _VAL2FLD(ADC_CR_DEEPPWD, 0b0); // exit deep power down mode
   ADC1 -> CR |= _VAL2FLD(ADC_CR_ADVREGEN, 0b1); // enable adc voltage regulator
   // wait for startup time to configure ADC
-  volatile int x = 5;
+  // requires 20 us. 800 / 40 MHz default clk = 20 us
+  // volatile int x = 5;
+  volatile int x = 800;
   while (x-- > 0)
     __asm("nop");
   ADC1 -> CR |= _VAL2FLD(ADC_CR_ADEN, 0b0); // disable ADC
