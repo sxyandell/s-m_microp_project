@@ -34,7 +34,9 @@ int ADC(int pin){
 int main(void) {
 
 	configureFlash();
+        // dont need this bc it sets PLL as clk source
 	configureClock();
+
       
         // initialize GPIOA,B,C
         gpioEnable(GPIO_PORT_A);
@@ -45,11 +47,15 @@ int main(void) {
         // initialize timer
         RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
         initTIM(TIM2);
+
 	// initialize SPI: BR=0b011 (fclk/16, 16MHz -> 1MHz) (max 10 MHz), CPOL=1, CPHA=1
 	//initSPI(0b011, 1, 1);
+
 	//// initialize gyro
 	//a3g_init();
+
         // config ADC
+        
         int adc_in = ADC(ADC_GPIO_PIN); // ADC_PA0 -> ADC1_IN5
         volatile uint16_t adc_out;
 
@@ -59,8 +65,8 @@ int main(void) {
 		//a3g_read_dsp(&x, &y, &z);
 		//printf("Angular velocity: X=%d Y=%d Z=%d dps\n", x, y, z);
                 adc_out = readADC(adc_in);
-                printf("adc reading: %x \n", adc_out);
-                delay_millis(TIM2, 10000);
+                printf("adc reading: %d \n", adc_out);
+                delay_millis(TIM2, 1000);
 	}
 }
 
