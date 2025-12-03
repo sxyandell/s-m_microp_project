@@ -10,7 +10,6 @@
 #include <stdio.h>
 #include "STM32L432KC_SPI.h"
 #include "STM32L432KC_GPIO.h"
-#include "STM32L432KC_SPI.h"
 
 
 static void a3g_write(uint8_t reg, uint8_t value) {

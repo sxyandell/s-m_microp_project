@@ -25,6 +25,13 @@ void configurePLL() {
    while(_FLD2VAL(RCC_CR_PLLRDY, RCC->CR) == 0);
 }
 
+//void configurePLLSSAI1(void){
+
+//  // Enable PLLSAI1 and wait until it's locked
+//  RCC-> CR |= RCC_CR_PLLSAI1ON;
+//  while (_FLD2VAL(RCC_CR_PLLRDY, RCC->CR) == 0);
+//}
+
 void configureClock(){
   // Configure and turn on PLL
   configurePLL();

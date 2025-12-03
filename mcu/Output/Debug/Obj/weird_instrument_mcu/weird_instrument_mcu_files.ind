@@ -6,6 +6,7 @@
 "Output/Debug/Obj/weird_instrument_mcu/STM32L432KC_SPI.o"
 "Output/Debug/Obj/weird_instrument_mcu/STM32L432KC_TIM.o"
 "Output/Debug/Obj/weird_instrument_mcu/STM32L432KC_USART.o"
+"Output/Debug/Obj/weird_instrument_mcu/STM32L432KC_ADC.o"
 "Output/Debug/Obj/weird_instrument_mcu/main.o"
 "Output/Debug/Obj/weird_instrument_mcu/SEGGER_THUMB_Startup.o"
 "Output/Debug/Obj/weird_instrument_mcu/stm32l432xx_Vectors.o"
