@@ -20,8 +20,8 @@ void initSPI(int br, int cpol, int cpha) {
 
     // Initially assigning SPI pins
     pinMode(SPI_SCK, GPIO_ALT); // SPI1_SCK
-    pinMode(SPI_MISO, GPIO_ALT); // SPI1_MISO
-    pinMode(SPI_MOSI, GPIO_ALT); // SPI1_MOSI
+    pinMode(SPI_CIPO, GPIO_ALT); // SPI1_MISO
+    pinMode(SPI_COPI, GPIO_ALT); // SPI1_MOSI
     pinMode(SPI_CE, GPIO_OUTPUT); //  Manual CS
 
     // Set output speed type to high for SCK

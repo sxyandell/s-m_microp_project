@@ -6,7 +6,7 @@
 void configurePLL() {
    // Set clock to 80 MHz
    // Output freq = (src_clk) * (N/M) / P
-   // (4 MHz) * (80/2) * 2  = 80 MHz
+   // (4 MHz) * (40/8) * 2  = 80 MHz
    // M:, N:, P:
    // Use HSI as PLLSRC
 
@@ -15,8 +15,8 @@ void configurePLL() {
 
    // Load configuration
    RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLSRC, RCC_PLLCFGR_PLLSRC_MSI);
-   RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLM, 0b001); // M = 2
-   RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLN, 80);    // N = 80
+   RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLM, 0b111); // M = 8
+   RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLN, 40);    // N = 40
    RCC->PLLCFGR |= _VAL2FLD(RCC_PLLCFGR_PLLR, 0b00);  // R = 2
    RCC->PLLCFGR |= RCC_PLLCFGR_PLLREN;                // Enable PLLCLK output
 
@@ -24,6 +24,13 @@ void configurePLL() {
    RCC->CR |= RCC_CR_PLLON;
    while(_FLD2VAL(RCC_CR_PLLRDY, RCC->CR) == 0);
 }
+
+//void configurePLLSSAI1(void){
+
+//  // Enable PLLSAI1 and wait until it's locked
+//  RCC-> CR |= RCC_CR_PLLSAI1ON;
+//  while (_FLD2VAL(RCC_CR_PLLRDY, RCC->CR) == 0);
+//}
 
 void configureClock(){
   // Configure and turn on PLL
