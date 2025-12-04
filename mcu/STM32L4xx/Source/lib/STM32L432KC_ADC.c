@@ -3,7 +3,6 @@
 // Madeleine Kan mkan@hmc.edu 2025
 // but made referencing code by Kavi Dey kdey@hmc.edu 2023
 
-#include "STM32L432KC_RCC.h"
 #include "STM32L432KC_ADC.h"
 
 
@@ -14,41 +13,33 @@
 
 
 void initADC(void) {
-  //RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;
-  //RCC->APB2ENR |= _VAL2FLD(RCC_APB2ENR_SYSCFGEN, 0b1);
-  //__enable_irq();
-  //  maybe try rewriting these with different syntax?? they work tho
+  ////////////////////
+  // ENABLE ADC CLK //
+  ////////////////////
   RCC -> AHB2ENR |= _VAL2FLD(RCC_AHB2ENR_ADCEN, 0b1); // enable adc clk
   RCC -> CCIPR |= _VAL2FLD(RCC_CCIPR_ADCSEL, ADC_CLKSRC_SYSCLK); // System clock selected as ADCs clock
 
-  // bottom two are not happening?!
-  //////////////////
-  // DISABLE ADC  //
-  //////////////////
-  // i think this doesn't make sense here since addis allegedly cant be set without aden...
-  //ADC1 -> CR |= _VAL2FLD(ADC_CR_ADDIS, 0b1); // disable ADC
-  //while (_FLD2VAL(ADC_CR_ADEN, ADC1->CR) != 0); // waut until ADC is disabled
-
-  ADC1 -> CR |= _VAL2FLD(ADC_CR_DEEPPWD, 0b0); // exit deep power down mode
-  ADC1 -> CR |= _VAL2FLD(ADC_CR_ADVREGEN, 0b1); // enable adc voltage regulator
+  ////////////////
+  // AWAKEN ADC //
+  ////////////////
+  ADC1->CR &= ~ADC_CR_DEEPPWD; // exit deep power down mode
+  ADC1->CR |= ADC_CR_ADVREGEN; // enable adc voltage regulator
+  //ADC1 -> CR |= _VAL2FLD(ADC_CR_DEEPPWD, 0b0); // exit deep power down mode
+  //ADC1 -> CR |= _VAL2FLD(ADC_CR_ADVREGEN, 0b1); // enable adc voltage regulator
   ADC1 -> CFGR |= _VAL2FLD(ADC_CFGR_RES, ADC_6BIT_RES); // define resolution of conversion to be 6 bits
-  // wait for voltage reg startup time to configure ADC
-  // requires 20 us. 800 / 40 MHz default clk = 20 us
-  // volatile int x = 5;
+
+  // voltage regulator startup time = 20 us = 800 / 40 MHz
   volatile int x = 800;
   while (x-- > 0)
     __asm("nop");
-  //ADC1 -> CR |= _VAL2FLD(ADC_CR_ADEN, 0b0); // disable ADC
  
   ///////////////////
   // CALIBRATE ADC //
   ///////////////////
-  //2. Ensure that ADEN = 0.
-  // 3. Select the input mode for this calibration by setting ADCALDIF = 0 (single-ended input) 
-  //or ADCALDIF = 1 (differential input).
-  // 4. Set ADCAL.
-  // 5. Wait until ADCAL = 0.
-  // 6. The calibration factor can be read from ADC_CALFACT register.
+  ADC1 -> CR |= _VAL2FLD(ADC_CR_ADCAL, 0b1); // write 1 to calibrate ADC, single-ended input
+  while (_FLD2VAL(ADC_CR_ADCAL, ADC1->CR) != 0); // Wait until ADCAL is 0 (so ADC is calibrated)
+  uint8_t calfact = _FLD2VAL(ADC_CALFACT_CALFACT_S, ADC1->CALFACT);
+  printf("adc successfully calibrated! calibration factor: %x \n", calfact);
 
   //////////////// 
   // ENABLE ADC //
@@ -56,9 +47,16 @@ void initADC(void) {
   ADC1 -> ISR |= _VAL2FLD(ADC_ISR_ADRDY, 0b1); // clear adrdy 
   ADC1 -> CR |= _VAL2FLD(ADC_CR_ADEN, 0b1); // enable ADC
   ADC1 -> IER |= _VAL2FLD(ADC_IER_ADRDYIE, 0b1); //  An interrupt is generated when the ADRDY bit is set.
-  while (_FLD2VAL(ADC_ISR_ADRDY, ADC1->ISR) != 1); // Wait till ADC is ready
+  while (_FLD2VAL(ADC_ISR_ADRDY, ADC1->ISR) != 1); // Wait until ADC is ready
   ADC1 -> ISR |= _VAL2FLD(ADC_ISR_ADRDY, 0b1); // clear adrdy 
 
+  //////////////////
+  // DISABLE ADC  //
+  //////////////////
+  //ADC1 -> CR |= _VAL2FLD(ADC_CR_ADDIS, 0b1); // disable ADC
+  //while (_FLD2VAL(ADC_CR_ADEN, ADC1->CR) != 0); // waut until ADC is disabled
+
+  
 }
 
 void initChannel(int channelNum){

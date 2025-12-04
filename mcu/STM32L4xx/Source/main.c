@@ -25,9 +25,6 @@ int ADC(int pin){
     initChannel(adc_in);
     return adc_in;
 
-    // QUESITON: how to configure "additional function"?
-    
-    //GPIOA->AFR[0] |= _VAL2FLD(GPIO_AFRL_AFSEL3, 5);
 }
 
 
@@ -49,24 +46,24 @@ int main(void) {
         initTIM(TIM2);
 
 	// initialize SPI: BR=0b011 (fclk/16, 16MHz -> 1MHz) (max 10 MHz), CPOL=1, CPHA=1
-	//initSPI(0b011, 1, 1);
+	initSPI(0b011, 1, 1);
 
-	//// initialize gyro
-	//a3g_init();
+	// initialize gyro
+	a3g_init();
+        volatile int16_t x = 0, y = 0, z = 0;
+
 
         // config ADC
-        
         int adc_in = ADC(ADC_GPIO_PIN); // ADC_PA0 -> ADC1_IN5
         volatile uint16_t adc_out;
 
 
 	while (1) {
-		volatile int16_t x = 0, y = 0, z = 0;
-		//a3g_read_dsp(&x, &y, &z);
-		//printf("Angular velocity: X=%d Y=%d Z=%d dps\n", x, y, z);
+		a3g_read_dsp(&x, &y, &z);
+		printf("Angular velocity: X=%d Y=%d Z=%d dps\n", x, y, z);
                 adc_out = readADC(adc_in);
                 printf("adc reading: %d \n", adc_out);
-                delay_millis(TIM2, 1000);
+                delay_millis(TIM2, 500);
 	}
 }
 
