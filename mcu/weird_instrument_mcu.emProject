@@ -69,6 +69,8 @@
       <folder Name="lib">
         <file file_name="STM32L4xx/Source/lib/A3G4250D.c" />
         <file file_name="STM32L4xx/Source/lib/A3G4250D.h" />
+        <file file_name="../../lab04teset/lib/PWM.c" />
+        <file file_name="../../lab04teset/lib/PWM.h" />
         <file file_name="STM32L4xx/Source/lib/STM32L432KC.h" />
         <file file_name="STM32L4xx/Source/lib/STM32L432KC_ADC.c" />
         <file file_name="STM32L4xx/Source/lib/STM32L432KC_ADC.h" />

@@ -24,3 +24,14 @@ void delay_millis(TIM_TypeDef * TIMx, uint32_t ms){
 
     while(!(TIMx->SR & 1)); // Wait for UIF to go high
 }
+
+void init_delay() {
+    // Disable SMS bits 0 to 2
+    TIM15->SMCR &= ~0x7;
+
+    // setting the pre-scalar value
+    TIM15->PSC = PSC_VAL;
+
+    // timer enable
+    TIM15->CR1 |= (1 << 0); 
+}

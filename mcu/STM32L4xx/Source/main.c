@@ -66,4 +66,3 @@ int main(void) {
                 delay_millis(TIM2, 500);
 	}
 }
-

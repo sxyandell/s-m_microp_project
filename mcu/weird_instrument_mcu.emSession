@@ -75,9 +75,9 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="5" y="14" useTextEdit="1" path="STM32L4xx/Source/lib/STM32L432KC_SPI.c" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="26" y="13" useTextEdit="1" path="STM32L4xx/Source/lib/STM32L432KC_SPI.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="STM32L4xx/Source/lib/STM32L432KC_RCC.c" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="24" useTextEdit="1" path="STM32L4xx/Source/lib/STM32L432KC_TIM.c" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="228" useTextEdit="1" path="STM32L4xx/Source/STM32L4xx_Startup.s" left="0" top="206" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="77" y="29" useTextEdit="1" path="STM32L4xx/Source/lib/A3G4250D.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="24" useTextEdit="1" path="STM32L4xx/Source/lib/STM32L432KC_TIM.c" left="0" top="2" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="228" useTextEdit="1" path="STM32L4xx/Source/STM32L4xx_Startup.s" left="0" top="207" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="77" y="29" useTextEdit="1" path="STM32L4xx/Source/lib/A3G4250D.h" left="46" top="8" codecName="Default"/>
  </Files>
- <EMStudioWindow activeProject="weird_instrument_mcu" fileDialogDefaultFilter="*" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/mkan/Documents/GitHub/s-m_microp_project/mcu/STM32L4xx/Source/lib" debugSearchPath="" autoConnectCapabilities="3711"/>
+ <EMStudioWindow activeProject="weird_instrument_mcu" fileDialogDefaultFilter="*" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/mkan/Documents/GitHub/s-m_microp_project/mcu/STM32L4xx/Source/lib" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>
