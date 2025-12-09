@@ -2,8 +2,7 @@
 #include "lib/STM32L432KC.h"
 #include <stdint.h>
 
-// Choose the output pin for the square wave
-// Change this if your buzzer/speaker is on a different pin
+// output pin for the square wave
 #define TONE_OUT_PIN PA5
                               //  0     1     2      3    4     5     6     7
 // Switch mapping (active-low):   red   brown yellow blue black red gray white
@@ -13,7 +12,7 @@ static const int switch_pins[8] = {PA12, PB0, PB4,   PB6, PA1,  PA0,  PA3,  PA8 
 // C4=261.63Hz, D4=293.66, E4=329.63, F4=349.23, G4=392.00, A4=440.00, B4=493.88, C5=523.25
 static const uint16_t half_us[8] = { 1911, 1703, 1517, 1432, 1276, 1136, 1012, 955 };
 
-// Configure TIM2 for ~1us tick, and provide a local delay_us using TIM2
+// Configure TIM2 local delay_us using TIM2
 static void tim2_setup_1us(void) {
 	// Enable TIM2 clock
 	RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
@@ -35,7 +34,7 @@ static void delay_us(uint32_t us) {
 	}
 }
 
-// Configure internal pull-ups for the specified pins (active-low switches)
+// Configure internal pull-ups for the pins (active-low switches)
 static void enable_pullups_for_switches(void) {
 	// PA12, PA8
 	GPIOA->PUPDR &= ~(0x3u << (2 * 12));
@@ -72,14 +71,14 @@ int main(void) {
 		printf("switch_pins %d\n", switch_pins[i]);
 
 	}
-	// Enable internal pull-ups (if external pull-ups are present, this is harmless)
+	// Enable internal pull-ups 
 	enable_pullups_for_switches();
 
 	// Configure tone output pin
 	pinMode(TONE_OUT_PIN, GPIO_OUTPUT);
 	digitalWrite(TONE_OUT_PIN, 0);
 
-	// Configure TIM2 to provide microsecond delays
+	// Configure TIM2 
 	tim2_setup_1us();
 
 	int count = 0;
