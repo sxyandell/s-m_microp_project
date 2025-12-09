@@ -13,7 +13,7 @@
 #include "lib/A3G4250D.h"
 #include <stdint.h>
 #include <stdio.h>
-#define ADC_GPIO_PIN PA0 
+#define ADC_GPIO_PIN PA2 
 #define BUFF_LEN 32
 
 #endif // MAIN_H
