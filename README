@@ -1,2 +1,9 @@
-This is Madeleine and Sarah's weird instrument 
-microp final project
+This is Madeleine and Sarah's weird instrument!! 
+
+
+fpga/weird_instrument_fpga/source/source contains drafted FPGA source code
+filter contains drafted FIR filter design materials
+mcu/STM32L4xx/Source contains MCU source code + libraries
+mechanical contains 3D models for mechanical housing, some made by us and others pulled from the internet
+
+
