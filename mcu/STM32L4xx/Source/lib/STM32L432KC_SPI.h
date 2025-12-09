@@ -8,7 +8,7 @@
 #include <stm32l432xx.h>
 
 
-#define SPI_CE PA12           // 5                                                                                                                                                                                                                                                                               
+#define SPI_CE PA11           // 5                                                                                                                                                                                                                                                                               
 #define SPI_SCK PB3       // 2
 #define SPI_COPI PB5 //SDI    // 3
 #define SPI_CIPO PB4 //SDO   // 4
