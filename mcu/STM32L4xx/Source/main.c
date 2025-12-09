@@ -33,7 +33,6 @@ int main(void) {
 	configureFlash();
         // dont need this bc it sets PLL as clk source
 	configureClock();
-
       
         // initialize GPIOA,B,C
         gpioEnable(GPIO_PORT_A);
